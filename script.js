@@ -1,20 +1,8 @@
 document.querySelectorAll('[contenteditable]').forEach((item) => {
     item.addEventListener('paste', (e) => {
-        //var item_address = e.target.id.split("-");
-        //if (item_address[1] == 1) {
         e.preventDefault();
         var text_list = (e.originalEvent || e).clipboardData.getData('text');
         window.document.execCommand('insertText', false, text_list.trim());
-        /*
-        var text_list = (e.originalEvent || e).clipboardData.getData('text/plain');
-        text_list = text_list.split(String.fromCharCode(13));
-        for(i=0;i<text_list.length;i++){
-            if(text_list[i]){
-                window.document.execCommand('insertText', false, text_list[i]);
-            }
-        }
-        */
-        //}
     });
 });
 
@@ -23,7 +11,6 @@ $(document).on('keydown', '.item_editable', function (e) {
 
     if (e.keyCode == '9') {
         //Tab key -> Enter key
-        //if(item_address>1 || $("#"+(parseInt(item_address[0])+1)+"-"+item_address[1]).length){
         if (item_address[1] > 1 || $("#" + (parseInt(item_address[0]) + 1) + "-" + item_address[1]).length) {
             $(this).trigger(
                 jQuery.Event('keypress', { keyCode: 13 })
@@ -52,7 +39,6 @@ $(document).on('keydown', '.item_editable', function (e) {
     if (e.keyCode == '39' && pos == $(this).html().length) {
         //Right arrow
         if (item_address[1] < 10) {
-            //alert("#"+item_address[0]+"-"+(parseInt(item_address[1])+1));
             $("#" + item_address[0] + "-" + (parseInt(item_address[1]) + 1)).focus();
         }
     }
