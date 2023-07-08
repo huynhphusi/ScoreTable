@@ -9,3 +9,5 @@ Mục tiêu của chương trình là tạo ra một TABLE thể hiện các c�
 5. Toàn bộ dữ liệu được lưu tự động mà không cần phải bấm nút.
 
 Với chương trình này, chúng ta có thể nhập điểm, thao tác và di chuyển linh hoạt giữa các ô; dữ liệu được lưu tự động vào trong file json và có hỗ trợ tiếng Việt.
+
+Bài viết mô tả chi tiết chương trình này, các bạn xem tại địa chỉ https://huynhphusi.com/thu-lam-chuong-trinh-quan-ly-diem-mini-bang-php-javascript-va-json/
