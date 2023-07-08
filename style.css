@@ -1,0 +1,33 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+tr:nth-child(even) {
+    background: #F0FFF0;
+}
+
+tr:hover {
+    background: #ADFF2F;
+}
+
+td,
+th {
+    border: 1px solid #000;
+    padding: 5px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+tr td:nth-child(2) {
+    text-align: justify;
+    text-transform: capitalize;
+}
+
+th {
+    background: #DCDCDC;
+}
+
+td {
+    vertical-align: top;
+}
